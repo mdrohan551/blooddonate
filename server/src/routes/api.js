@@ -5,7 +5,7 @@ const locationController = require("../controller/locationController");
 const ImageUploadController = require("../controller/ImageUploadController");
 const authMiddleware = require("../middlewares/authMiddleware");
 const cloudUpload = require("../middlewares/CloudMulter");
-const postController = require('../controller/PostController');
+const PostController = require('../controller/PostController');
 
 const router = express.Router();
 
@@ -63,16 +63,16 @@ router.post("/upload-image",cloudUpload.single("image"),ImageUploadController.up
 
 // ----------------------------------------------------------------//
 //Post Upload 
-router.post('/create-post', authMiddleware, postController.createPostControllers);
+router.post('/create-post', authMiddleware, PostController.createPostControllers);
 //read Post
-router.get('/read-post/:postId',postController.readPostControllers);
-router.get('/get-post-user',authMiddleware,postController.getPostUserControllers);
-router.get('/get-post',postController.getPostControllers);
+router.get('/read-post/:postId',PostController.readPostControllers);
+router.get('/get-post-user',authMiddleware,PostController.getPostUserControllers);
+router.get('/get-post',PostController.getPostControllers);
 
 //comment post
-router.post('/comment-post/:postId', authMiddleware, postController.commentPostControllers);
+router.post('/comment-post/:postId', authMiddleware, PostController.commentPostControllers);
 // like Post 
-router.post('/like-post/:postId', authMiddleware, postController.likePostControllers);
+router.post('/like-post/:postId', authMiddleware, PostController.likePostControllers);
 
 
 
