@@ -1,0 +1,9 @@
+.text-stroke {
+    color: #006b11; /* Text color is transparent */
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.46); /* Set the stroke width and color */
+}
+.notVerified{
+    font-family: var(--mainFont);
+    letter-spacing: -0px;
+    line-height: 35px;
+}

@@ -1,0 +1,267 @@
+.plan-card {
+    background: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--success);
+    box-shadow: 0 6px 30px rgba(207, 212, 222, 0.3);
+    font-family: "Poppins", sans-serif;
+}
+/*meta img */
+.meta {
+    width: 2.3rem;
+    height: 1.5rem;
+    position: relative;
+}
+
+.metaVefy {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.metaVefy:after {
+    content: "verify"; /* Displays 'verified' text */
+    position: absolute;
+    top: 100%; /* Place the badge below the element */
+    left: 0; /* Align it to the left */
+    font-size: 12px; /* Adjusted font size for better appearance */
+    font-weight: 300;
+    background: #545454;
+    color: #fff;
+    padding: 4px 8px; /* Adjusted padding for better sizing */
+    border-radius: 10px; /* Rounded corners */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent mouse interactions */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    transform: translateY(-10px); /* Slight upward offset */
+}
+
+.meta:hover + .metaVefy:after {
+    opacity: 1; /* Make the badge visible */
+    transform: translateY(0); /* Remove the offset for a smooth appearance */
+}
+
+
+.notVerified{
+    position: relative;
+}
+
+.notVerified:after {
+    content: "Not Verified"; /* Displays 'verified' text */
+    position: absolute;
+    top: 45%; /* Place the badge below the element */
+    right: 50%; /* Align it to the left */
+    font-size: 12px; /* Adjusted font size for better appearance */
+    font-weight: 300;
+    background: #545454;
+    color: #fff;
+    padding: 4px 8px; /* Adjusted padding for better sizing */
+    border-radius: 10px; /* Rounded corners */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent mouse interactions */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    transform: translateY(-10px); /* Slight upward offset */
+}
+
+.notVerified:hover:after {
+    opacity: 1; /* Make the badge visible */
+    transform: translateY(0); /* Remove the offset for a smooth appearance */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.plan-card h2 {
+    margin-bottom: 15px;
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.plan-card h2 span {
+    display: flex;
+    margin-top: -4px;
+    color: #4d4d4d;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.bloodGrup {
+    position: relative;
+    background: var(--textNav);
+    width: 17.3rem;
+    margin-left:0rem;
+    padding: .2rem 1.2rem;
+    border-radius: 5px 0 0 5px;
+}
+
+.bloodGrup p {
+    margin: 0;
+    padding-top: .4rem;
+    display: flex;
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+
+
+.bloodGrup p:after {
+    content: "100%";
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.bloodGrup div {
+    position: absolute;
+    bottom: -23px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid #030303;
+    border-bottom: 10px solid transparent;
+    border-right: 13px solid transparent;
+    z-index: -6;
+}
+
+.benefits-list {
+    margin-top: 16px;
+}
+
+.benefits-list ul {
+    padding: 0;
+    font-size: 14px;
+}
+
+.benefits-list ul li {
+    color: #4d4d4d;
+    list-style: none;
+    margin-bottom: .2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.benefits-list ul li i {
+    font-size: 1rem;
+    color: currentColor;
+}
+
+.benefits-list ul li span {
+    font-weight: 300;
+}
+
+.button-get-plan {
+    display: flex;
+    justify-content: start;
+    margin-top: 1.2rem;
+}
+
+.button-get-plan a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000446;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: .8rem;
+    letter-spacing: .05rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button-get-plan a:hover {
+    transform: translateY(-3%);
+    box-shadow: 0 3px 10px rgba(207, 212, 222, 0.9);
+}
+
+.button-get-plan i {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: currentColor;
+}
+
+
+
+/* select and search  */
+/* Wrapper to style select and add arrow */
+.custom-select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Style for Select Dropdown */
+.search-select {
+    flex: 1;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #dc3545;
+    border-radius: 5px;
+    color: #dc3545;
+    font-weight: bold;
+    background: white;
+    appearance: none;
+    cursor: pointer;
+    padding-right: 35px; /* Space for arrow */
+}
+
+/* Custom Arrow for Select */
+.custom-arrow {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+}
+
+.custom-arrow::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #dc3545;
+    border-bottom: 2px solid #dc3545;
+    transform: rotate(-45deg);
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    margin-top: -4px;
+    margin-left: -6px;
+}
+
+/* Search Button */
+.search-btn {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.optionfontsize{
+    font-size: 8px !important;
+}

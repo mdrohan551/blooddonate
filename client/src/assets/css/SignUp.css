@@ -1,0 +1,72 @@
+/* Container and Form Styling */
+.form-container {
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007bff;
+}
+
+button {
+    background-color: #ff0026;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    font-weight: bold;
+    color: #ddd;
+    background-color: white;
+}
+
+.circle.active {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background-color: #ddd;
+}
+
+.line.active {
+    background-color: #007bff;
+}
+
+.signUp{
+    .form-control{
+        border-bottom: 1px solid rgba(121, 121, 121, 0.37);
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-top: 1px solid transparent;
+        box-shadow:10px 10px 15px rgba(131, 131, 131, 0.22) !important;
+    }
+    .form-control:focus {
+        border-color: #008d00 !important; /* Green border */
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0) !important; /* Green glow */
+        background-color: white !important; /* Keep input white */
+    }
+    .signUpContainer{
+        padding: 5rem 10rem 0;
+    }
+
+}

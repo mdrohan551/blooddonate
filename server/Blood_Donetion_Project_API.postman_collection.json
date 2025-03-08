@@ -1,0 +1,1749 @@
+{
+	"info": {
+		"_postman_id": "2145be72-2af7-4eae-a12e-df76f0597e0f",
+		"name": "Blood_Donetion_Project_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38179196"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"firstName\": \"Ahmed\",\r\n    \"lastName\": \"Khan\",\r\n    \"Gender\": \"Male\",\r\n    \"DateOfBirth\":\"2003-12-10\",\r\n    \"NIDNumber\": \"12345678901238457\",\r\n    \"phoneNumber\": \"01712345671\",\r\n    \"password\": \"password123\",\r\n    \"bloodGroup\": \"A+\"\r\n\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/registration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phoneNumber\": \"01712345671\",\r\n    \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/logout",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"location\": {\r\n    \"Division\": \"Feni\",\r\n    \"zila\": \"Gazipur\",\r\n    \"upzila\": \"Sreepur\",\r\n    \"CurrentAddress\": \"House 123, Road 4, Sreepur\"\r\n  },\r\n  \"Weight\": 70,\r\n  \"HealthConditions\": \"bad\",\r\n  \"lastDonationTime\": \"2023-12-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/CreateProfile",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"CreateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProfileDetails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/ProfileDetails",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"ProfileDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EmailOTP",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/UserOTP/mdfawjulazim617@gmail.com",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"UserOTP",
+								"mdfawjulazim617@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifyOTP",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/VerifyLogin/learningcsell555@gmail.com/133163",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"VerifyLogin",
+								"learningcsell555@gmail.com",
+								"133163"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProfileUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"firstName\":\"Mohammad\",\r\n\"lastName\":\"12345678901234567\",\r\n\"NIDNumber\":\"12345678901234567\",\r\n\"phoneNumber\":\"005114122\",\r\n\"bloodGroup\":\"a+\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/ProfileUpdate",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"ProfileUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/DeleteUser/677e7070064dcfdca6651406",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"DeleteUser",
+								"677e7070064dcfdca6651406"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USERSHOW",
+			"item": [
+				{
+					"name": "findByAllUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/findByAllUsers",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"findByAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CountBloodGroupUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/CountBloodGroupUser",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"CountBloodGroupUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByBloodGroup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/findByBloodGroup/a+",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"findByBloodGroup",
+								"a+"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByDivision",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/findByDivision/Dhaka",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"findByDivision",
+								"Dhaka"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByZila",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/findByZila/Gazipur",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"findByZila",
+								"Gazipur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByUpzila",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/findByUpzila/khan",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"findByUpzila",
+								"khan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/findByName/l",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"findByName",
+								"l"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "GetDivisions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/GetDivisions",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"GetDivisions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetDivisions Route",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/GetDivisions",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"GetDivisions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "80000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "79995"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Feb 2025 18:11:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1739730266"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "128"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"80-sjcfpvf6TL6ztyRBH+rtkCAgs78\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"count\": 8,\n    \"divisions\": [\n        \"Barishal\",\n        \"Chattogram\",\n        \"Dhaka\",\n        \"Khulna\",\n        \"Mymensingh\",\n        \"Rajshahi\",\n        \"Rangpur\",\n        \"Sylhet\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetZila",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/GetZila/Khulna",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"GetZila",
+								"Khulna"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetZila Route",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/GetZila/Khulna",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"GetZila",
+										"Khulna"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "80000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "79994"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Feb 2025 18:11:34 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1739730266"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-92t7IEqdecpbt28MOL+AjYVcEZs\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"count\": 10,\n    \"zila\": [\n        \"Bagerhat\",\n        \"Chuadanga\",\n        \"Jashore\",\n        \"Jhenaidah\",\n        \"Khulna\",\n        \"Kushtia\",\n        \"Magura\",\n        \"Meherpur\",\n        \"Narail\",\n        \"Satkhira\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetUpzila",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/GetUpzila/Jamalpur",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"GetUpzila",
+								"Jamalpur"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetUpzila Route",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/GetUpzila/Jamalpur",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"GetUpzila",
+										"Jamalpur"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "80000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "79992"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Feb 2025 18:12:02 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1739730266"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "134"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"86-A5dYW0aXOZzhvz6YrvGOEN8w2kQ\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"count\": 7,\n    \"upazilas\": [\n        \"Bakshiganj\",\n        \"Dewanganj\",\n        \"Islampur\",\n        \"Jamalpur Sadar\",\n        \"Madarganj\",\n        \"Melandaha\",\n        \"Sarishabari\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/Get",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"Get"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Count",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/Get",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"Get"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "80000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "79999"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Feb 2025 18:20:24 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1739730925"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-3ZFwG3MkRaFcwhBUFMuMqFZRbLc\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"totalDivisions\": 8,\n    \"totalZilas\": 64,\n    \"totalUpazilas\": 471\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Post Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post\": \"I love\",\r\n    \"image\": \"URL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/create-post",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"create-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"I\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/comment-post/67b1a920a8e2cdc0467b96c5",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"comment-post",
+								"67b1a920a8e2cdc0467b96c5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/like-post/67b1a920a8e2cdc0467b96c5",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"like-post",
+								"67b1a920a8e2cdc0467b96c5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Like Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/like-post/67b1a920a8e2cdc0467b96c5",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"like-post",
+										"67b1a920a8e2cdc0467b96c5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "80000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "79997"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Feb 2025 09:10:02 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1739697885"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-pSshKHS6iYUZ17uIpp3UoOfoeMQ\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Post liked\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Image Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/Md Fawjul Azim pic.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/upload-image",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"upload-image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Image Upload",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Desktop/photo/about-me-modified.png"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/upload-image",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"upload-image"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "80000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "79999"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Feb 2025 17:25:07 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1739641208"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "328"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"148-OpB9wg/qgfuaXlftsAXb7dZfP9o\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Image uploaded successfully\",\n    \"data\": {\n        \"secure_url\": \"https://res.cloudinary.com/dj0rzds3e/image/upload/v1739640356/BloodDonation/wwlmxqserf1vnmxqbvzp.png\",\n        \"url\": \"http://res.cloudinary.com/dj0rzds3e/image/upload/v1739640356/BloodDonation/wwlmxqserf1vnmxqbvzp.png\",\n        \"filename\": \"about-me-modified.png\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/get-post-user",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"get-post-user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/get-post-user",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"get-post-user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "80000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "79996"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Mar 2025 18:08:39 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1741112590"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "850"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"352-FCkSkjcn7UaVdChkhcJ4KpqIJbo\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User and posts fetched successfully\",\n    \"data\": {\n        \"_id\": \"67bb5cf43b00d09c0bf6e8c1\",\n        \"firstName\": \"Ahmed\",\n        \"lastName\": \"Khan\",\n        \"Gender\": \"Male\",\n        \"DateOfBirth\": \"2003-12-10T00:00:00.000Z\",\n        \"NIDNumber\": \"12345678901238457\",\n        \"phoneNumber\": \"01712345671\",\n        \"bloodGroup\": \"A+\",\n        \"verify\": false,\n        \"Email\": \"a+174714@notfound.com\",\n        \"role\": \"ADMIN\",\n        \"posts\": [\n            {\n                \"_id\": \"67c73579b60924d6aad25786\",\n                \"post\": \"I love\",\n                \"image\": \"URL\",\n                \"UserID\": \"67bb5cf43b00d09c0bf6e8c1\",\n                \"likes\": [],\n                \"comments\": [],\n                \"createdAt\": \"2025-03-04T17:16:41.954Z\"\n            },\n            {\n                \"_id\": \"67c7357ab60924d6aad25788\",\n                \"post\": \"I love\",\n                \"image\": \"URL\",\n                \"UserID\": \"67bb5cf43b00d09c0bf6e8c1\",\n                \"likes\": [],\n                \"comments\": [],\n                \"createdAt\": \"2025-03-04T17:16:42.857Z\"\n            },\n            {\n                \"_id\": \"67c7357bb60924d6aad2578a\",\n                \"post\": \"I love\",\n                \"image\": \"URL\",\n                \"UserID\": \"67bb5cf43b00d09c0bf6e8c1\",\n                \"likes\": [],\n                \"comments\": [],\n                \"createdAt\": \"2025-03-04T17:16:43.710Z\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Read Single Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/read-post/67b1a920a8e2cdc0467b96c5",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"read-post",
+								"67b1a920a8e2cdc0467b96c5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Read Single Post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/read-post/67b1a920a8e2cdc0467b96c5",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"read-post",
+										"67b1a920a8e2cdc0467b96c5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "80000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "79999"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Feb 2025 10:57:25 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1739704346"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "290"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"122-SSfwOk4JZA1SCXv36MxKcGdMMr0\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Post fetched successfully\",\n    \"data\": {\n        \"_id\": \"67b1a920a8e2cdc0467b96c5\",\n        \"post\": \"I\",\n        \"image\": \"URL\",\n        \"UserID\": \"67b0d0544814dd8b7a76e2bd\",\n        \"likes\": [\n            \"67b0d0544814dd8b7a76e2bd\"\n        ],\n        \"comments\": [],\n        \"createdAt\": \"2025-02-16T09:00:16.987Z\",\n        \"updatedAt\": \"2025-02-16T09:10:02.776Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/get-post",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"get-post"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/get-post",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"get-post"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "80000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "79997"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Mar 2025 18:08:20 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1741112590"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2290"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8f2-dyx8+zvxJapI1FTnC5jnDYYzVIA\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Posts with user details fetched successfully\",\n    \"data\": [\n        {\n            \"_id\": \"67c7357bb60924d6aad2578a\",\n            \"post\": \"I love\",\n            \"image\": \"URL\",\n            \"UserID\": \"67bb5cf43b00d09c0bf6e8c1\",\n            \"likes\": [],\n            \"comments\": [],\n            \"createdAt\": \"2025-03-04T17:16:43.710Z\",\n            \"updatedAt\": \"2025-03-04T17:16:43.710Z\",\n            \"user\": {\n                \"_id\": \"67bb5cf43b00d09c0bf6e8c1\",\n                \"firstName\": \"Ahmed\",\n                \"lastName\": \"Khan\",\n                \"Gender\": \"Male\",\n                \"DateOfBirth\": \"2003-12-10T00:00:00.000Z\",\n                \"NIDNumber\": \"12345678901238457\",\n                \"phoneNumber\": \"01712345671\",\n                \"bloodGroup\": \"A+\",\n                \"verify\": false,\n                \"Email\": \"a+174714@notfound.com\",\n                \"role\": \"ADMIN\"\n            }\n        },\n        {\n            \"_id\": \"67c7357ab60924d6aad25788\",\n            \"post\": \"I love\",\n            \"image\": \"URL\",\n            \"UserID\": \"67bb5cf43b00d09c0bf6e8c1\",\n            \"likes\": [],\n            \"comments\": [],\n            \"createdAt\": \"2025-03-04T17:16:42.857Z\",\n            \"updatedAt\": \"2025-03-04T17:16:42.857Z\",\n            \"user\": {\n                \"_id\": \"67bb5cf43b00d09c0bf6e8c1\",\n                \"firstName\": \"Ahmed\",\n                \"lastName\": \"Khan\",\n                \"Gender\": \"Male\",\n                \"DateOfBirth\": \"2003-12-10T00:00:00.000Z\",\n                \"NIDNumber\": \"12345678901238457\",\n                \"phoneNumber\": \"01712345671\",\n                \"bloodGroup\": \"A+\",\n                \"verify\": false,\n                \"Email\": \"a+174714@notfound.com\",\n                \"role\": \"ADMIN\"\n            }\n        },\n        {\n            \"_id\": \"67c73579b60924d6aad25786\",\n            \"post\": \"I love\",\n            \"image\": \"URL\",\n            \"UserID\": \"67bb5cf43b00d09c0bf6e8c1\",\n            \"likes\": [],\n            \"comments\": [],\n            \"createdAt\": \"2025-03-04T17:16:41.954Z\",\n            \"updatedAt\": \"2025-03-04T17:16:41.954Z\",\n            \"user\": {\n                \"_id\": \"67bb5cf43b00d09c0bf6e8c1\",\n                \"firstName\": \"Ahmed\",\n                \"lastName\": \"Khan\",\n                \"Gender\": \"Male\",\n                \"DateOfBirth\": \"2003-12-10T00:00:00.000Z\",\n                \"NIDNumber\": \"12345678901238457\",\n                \"phoneNumber\": \"01712345671\",\n                \"bloodGroup\": \"A+\",\n                \"verify\": false,\n                \"Email\": \"a+174714@notfound.com\",\n                \"role\": \"ADMIN\"\n            }\n        },\n        {\n            \"_id\": \"67c733f4b9a8032e39a73a61\",\n            \"post\": \"আমরা বাংলায় ওয়েব ডেডলপমেন্ট নিয়ে কাজ করতে গিয়ে প্রথম যে সমস্যাটার মুখোমুখি হই,\",\n            \"image\": \"http://res.cloudinary.com/dj0rzds3e/image/upload/v1741108187/BloodDonation/oledyewl9mtohgwmwg9h.webp\",\n            \"UserID\": \"67c0bd5da7245629422679df\",\n            \"likes\": [],\n            \"comments\": [],\n            \"createdAt\": \"2025-03-04T17:10:12.194Z\",\n            \"updatedAt\": \"2025-03-04T17:10:12.194Z\",\n            \"user\": {\n                \"_id\": \"67c0bd5da7245629422679df\",\n                \"firstName\": \"md\",\n                \"lastName\": \"Rohan\",\n                \"Gender\": \"Male\",\n                \"DateOfBirth\": \"2005-03-03T00:00:00.000Z\",\n                \"NIDNumber\": \"2545689545\",\n                \"phoneNumber\": \"01750192098\",\n                \"bloodGroup\": \"O+\",\n                \"verify\": true,\n                \"Email\": \"hgh@gmail.com\",\n                \"role\": \"USER\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://localhost:2020/api/v1",
+			"type": "string"
+		}
+	]
+}

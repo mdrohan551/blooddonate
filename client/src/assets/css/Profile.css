@@ -1,0 +1,465 @@
+/*sidebar====================================================== */
+
+.cardArea {
+    box-shadow: 0 10px 5rem 0 rgba(134, 134, 134, 0.2);
+}
+
+.ProfileText h1 {
+    font-family: var(--monstar), sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+}
+
+.image-parents {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.profiles {
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    font-size: 6.5rem;
+    color: #050505;
+    top: 25%;
+    left: 5%;
+
+
+}
+
+.profiles .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 5rem 0 rgba(0, 0, 0, 0.3);
+
+
+}
+
+.ProfileContent {
+    h2 {
+        font-size: 2rem;
+        color: var(--black);
+        text-transform: uppercase;
+        font-family: var(--mainFont), sans-serif;
+        font-weight: bold;
+        margin-bottom: -0.5rem;
+    }
+
+    span {
+        font-family: var(--mainFont), sans-serif;
+        text-transform: lowercase;
+        font-weight: lighter;
+        color: rgba(74, 74, 74, 0.8);
+
+    }
+
+}
+
+.Adress {
+
+
+    .grupe {
+        color: var(--black);
+        font-family: var(--mainFont), sans-serif;
+        text-transform: capitalize;
+    }
+}
+
+.meta2 {
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background: #ffffff;
+    top: 109%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        font-size: 1.2rem
+    }
+}
+
+/*sidebar====================================================== end*/
+/*content bar=======================================================*/
+.Chekdonation{
+    position: relative;
+    transition: all linear .3s;
+    &:hover{
+        &:after {
+            transition: all linear .3s;
+            content: ' Post Allowed After Donate';
+            font-size: clamp(1rem, 2vw + 1rem, 4rem);  /* Responsive text size */
+            color: #000000;
+            padding: 2rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: rgba(126, 126, 126, 0.29);
+            border-radius: 1rem;
+            cursor: not-allowed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-left: 76px;
+            /* Space for icon */
+        }
+
+        &:before {
+            content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="red" class="bi bi-lock" viewBox="0 0 16 16"%3E%3Cpath d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1"%3E%3C/path%3E%3C/svg%3E');
+            position: absolute;
+            top: 45%;
+            left: 10%;  /* Default positioning for larger screens */
+            transform: translateY(-50%);
+            width: clamp(40px, 6vw, 80px);  /* Responsive icon size */
+            height: clamp(40px, 6vw, 80px);  /* Responsive icon size */
+            font-size: clamp(1rem, 3vw + 1rem, 5rem);  /* Responsive icon font size */
+            z-index: 1;
+            transition: all linear .3s;
+        }
+    }
+
+    /* Media Query for Mobile Devices */
+    @media (max-width: 768px) {
+        &:before {
+            left: 5%;  /* More left-aligned on mobile */
+        }
+    }
+}
+.userInfo {
+
+
+
+
+    .userPost {
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 0 0 1rem;
+
+        .message {
+            font-family: var(--mainFont), sans-serif;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: var(--black);
+            font-size: clamp(1rem, 4vw, 2rem); /* Responsive font */
+            padding: 1rem;
+            border-top: 0.3rem solid var(--success) !important;
+            border: 0;
+            box-shadow: 0 1px 0.2rem 0 rgba(112, 112, 112, 0.2);
+        }
+
+        /* Light and soft placeholder */
+
+        .message::placeholder {
+            color: rgba(0, 0, 0, 0.35); /* Light gray */
+            font-weight: 300; /* Lighter font weight */
+            font-style: italic; /* Optional for softness */
+        }
+
+        /* Change placeholder color when textarea is focused */
+
+        .message:focus::placeholder {
+            color: rgba(0, 0, 0, 0.2); /* Even lighter on focus */
+        }
+
+    }
+
+    .action {
+        padding-top: 2rem;
+    }
+
+    /* Hide default file input */
+    .imagePostIcon {
+        display: none;
+    }
+
+    /* Upload button (matching PostButton style) */
+    .upload-label {
+        color: var(--textNav);
+        font-size: clamp(1rem, 4vw, 2rem);
+        background: transparent;
+        padding: 0.5rem 3rem;
+        border-radius: 1rem;
+        border: 1px solid var(--textNav);
+        cursor: pointer;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hover effect */
+    .upload-label:hover {
+        background: rgba(255, 0, 0, 0.04);
+        border-color: var(--success);
+        color: var(--textNav);
+    }
+    .PostButton {
+        color: var(--textNav);
+        font-size: clamp(0.8rem, 4vw, 1.2rem);
+        background: transparent;
+        padding: 0.5rem 3rem;
+        border-radius: 1rem;
+        border: 1px solid var(--textNav);
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden; /* Prevents background overflow */
+        z-index: 0;
+    }
+
+    /* Background Effect (Starts as a dot in the center) */
+    .PostButton:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background: var(--textNav);
+           /* Makes it start as a small dot */
+        transform: translate(-50%, -50%) scale(0); /* Center it and start small */
+        transition: transform 0.4s ease-in-out;
+        z-index: -1; /* Keeps background behind text */
+        border-radius: 1rem;
+    }
+
+    /* Hover Effect */
+    .PostButton:hover {
+        color: var(--white); /* Text turns white on hover */
+    }
+
+    .PostButton:hover:before {
+        transform: translate(-50%, -50%) scale(1); /* Expands to cover the button */
+        border-radius: 1rem; /* Turns into a rectangle when fully expanded */
+    }
+
+
+}
+.bioGrap {
+    padding: 1rem; /* Ensure there's padding around the bioGrap for spacing */
+
+    .popup-text {
+        color: var(--white);
+        font-size: clamp(0.7rem, 4vw, 1.5rem);
+        text-align: center;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .bioGrapContent {
+        color: #494949;
+        text-transform: capitalize;
+        font-family: var(--mainFont), sans-serif;
+        font-weight: lighter;
+
+        p {
+            color: rgba(58, 58, 58, 0.82);
+            font-size: 1rem;
+            text-transform: capitalize;
+            padding: 0;
+            margin: 0;
+            font-family: var(--mainFont), sans-serif;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--textNav); /* Primary color */
+            margin-bottom: 1rem;
+        }
+
+        .bioData {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping of columns on small screens */
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            gap: 1rem; /* Adjust gap between columns */
+        }
+
+        .bioColumn {
+            flex: 1;
+            min-width: 250px; /* Ensure columns don't become too narrow */
+        }
+
+        .bioList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bioList li {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        .label {
+            font-weight: bold;
+            flex: 0 0 120px; /* Increased width for better alignment */
+            text-align: left;
+            color: #333;
+        }
+
+        .value {
+            flex: 1;
+            text-align: left;
+            color: #666;
+            word-wrap: break-word;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+/*content input======================start */
+
+
+/* Main Form Card */
+.form-card {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Form Title */
+.form-title {
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Input Fields */
+.form-control {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Input fields read-only styling */
+.form-control[readonly] {
+    background-color: #f1f1f1;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #6c757d;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+}
+
+.submit-btn:hover {
+    background-color: #5a6268;
+    transition: background-color 0.3s;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .form-card {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-card {
+        padding: 15px;
+    }
+}
+/* Input Focus Effect */
+.form-control {
+    background: var(--white);
+    width: 100%; /* Full width of parent container */
+    max-width: 25rem; /* Limit max width */
+    border-radius: 10px;
+    height: 3rem;
+    padding: 0 1rem;
+
+
+}
+.form-control {
+    input{
+        font-size:0.8rem;
+
+    }
+}
+.form-control:focus {
+    border-color: #008d00 !important; /* Green border */
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0) !important; /* Green glow */
+    background-color: white !important; /* Keep input white */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .form-control {
+        max-width: 20rem;
+        height: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-control {
+        max-width: 100%;
+        height: 3rem;
+    }
+}
+.marginLeft{
+    margin-left: 0.5rem;
+}
+.custom-select {
+    color: var(--black);
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.custom-option {
+    color: rgba(152, 0, 0, 0.96);
+    background-color: rgba(255, 255, 255, 0.91);
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+
+/*content input======================end */
+/*content bar===================================================end*/

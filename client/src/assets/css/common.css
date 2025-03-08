@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+ul,li,ol{
+    list-style: none;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+:root{
+    --main_menu-bg:#f1f0f0;
+}
+body{
+
+    background: var(--main_menu-bg);
+
+}
+#Banner{
+    position: relative;
+}
+#Banner:after{
+    content: "";
+    position:   absolute;
+    top: -150px;
+    right: 0px;
+     width: 12%;
+    height: 100%;
+    max-height: 100%;
+    background-image: url("/images/OBJECTSline_shap.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    z-index: -999;
+    opacity: 50%;
+    mix-blend-mode: color-burn;
+}#Banner:before{
+    content: "";
+     position:   absolute;
+     top: 150px;
+     left: 0;
+     width: 15%;
+     height: 100%;
+    background-image: url("/images/OBJECTSline_shap.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    z-index: -999;
+    opacity: 50%;
+    mix-blend-mode: color-burn;
+    transform: rotate(180deg);
+
+}
+
+/*common css end */
+@media (max-width:768px){
+    .banner_Text {
+        .banner_small_text{
+            font-size: 1rem !important;
+            font-family: var(--mainFont), serif;
+            font-weight: 600;
+            color: var(--textNav);
+            margin-top: 30px;
+
+        }
+        & .banner_title_text {
+            font-size: 2.9rem !important;
+            font-family: var(--secondFont), serif;
+            font-weight: 900;
+            letter-spacing: 0px !important;
+            text-transform: uppercase;
+            color: var(--black);
+            line-height: 3.2rem !important;
+        }
+    }
+  .outlineText {
+        font-size: 2.8rem !important;
+        margin-left: 10px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-shadow: rgba(255, 116, 74, 0.18) 47px 33px 38px;
+        transition: 0.5s ease-in-out;
+        color: transparent;
+        -webkit-text-stroke: 1px black;
+    }
+    .box {
+        width: 110px !important;
+        height: 58px !important;
+
+    }
+
+    }
+
+
+
+/* =========================================back to top button ============================================= */
+.back_top_button{
+    position: fixed;
+    bottom: 10%;
+    right: -3%;
+    background-color: var(--textNav);
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+   transform:scale(0) ;
+   transition: all linear .3s;
+    
+}
+.show{
+    right: 3%;
+    transform:scale(1) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

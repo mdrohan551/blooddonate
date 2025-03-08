@@ -1,0 +1,90 @@
+#footer {
+    padding: 60px 0; /* Increased padding for better spacing */
+}
+
+.footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 30px 0; /* Increased padding for more spacious layout */
+}
+
+.footer_title {
+    background: var(--main_menu-bg);
+    border-radius: 15px;
+    margin-top: -40px; /* Adjusted to balance the spacing */
+    padding: 20px;
+    font-size: 2.5rem; /* Increased font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer_logo {
+    width: 200px; /* Increased size for better visibility */
+    height: 100px;
+    margin: 0 auto; /* Centered the logo */
+}
+
+.footer_subtitle {
+    font-size: 1.7rem; /* Slightly larger subtitle */
+    font-weight: 800;
+    font-family: var(--secondFont), serif;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 15px; /* Added margin for spacing */
+}
+
+.footer_links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_links li {
+    margin: 8px 0; /* Spaced out the links */
+}
+
+.footer_links li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 0;
+    display: block;
+    font-size: 1.1rem; /* Increased font size for better readability */
+    transition: all linear .3s;
+}
+
+.footer_links li a:hover {
+    color: var(--textNav); /* Accent color on hover */
+    text-decoration: underline; /* Added underline effect */
+}
+
+.footer_links li a i {
+    color: white;
+    font-size: 1.6rem; /* Increased icon size for better visibility */
+    transition: all linear .3s;
+}
+
+.footer_links li a:hover i {
+    color: var(--textNav); /* Accent color on hover */
+}
+
+.copyrightText {
+    background:var(--white);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.copyright {
+    font-size: 1rem;
+    padding: 10px 0;
+    color: var(--black);
+    text-align: center;
+}
+
+.copyright span a {
+    color: var(--textNav) !important;
+    font-style: italic;
+    font-weight: 600;
+}
+

@@ -1,0 +1,54 @@
+Blood Donation Project ToDo..
+
+----------------------------------------------------------------
+#Backend Project
+---- Project File Folder & Package(completed)
+---- Model Create 
+            .User Model (
+                firstName(string)
+                lastName(string)
+                Gender(string)[Male,Female]
+                NIDNumber(String)
+                phoneNumber(String)
+                password(String)
+                bloodGroup(String)
+                verify(Boolean)[True,False]
+                Email(String)[`${firstName.toLowerCase()}${random}@example.com`]
+                otp(String)
+                role(String)[user,admin]
+                )
+            .Profile Model(
+                UserID(MongoseID)
+                location:
+                        .Division
+                        .zila
+                        .upzila
+                        .Current Address 
+                Weight(string)
+                Health Conditions(string)
+                last Donation Time(Date);                                
+            )
+----Utility
+----Controllers
+        . Registration
+        . Login
+        . logout
+        . OTPRequest
+        . verified
+        . DeleteUser
+
+        . updateUserProfile
+        . getAllUsers
+
+        . ProfileDetails
+
+        . FindByBloodGroup
+        . FindByLocation
+        . FindByDonationTime
+
+        . ClickNumber to Call 
+        . NOtification for 3 Month donation time
+--- Services
+--- Route
+    
+

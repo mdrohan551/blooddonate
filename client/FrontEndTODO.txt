@@ -1,0 +1,90 @@
+Blood FullStack Service
+---------------------------------------
+  create vite + React
+    └── cd client 
+            └──npm i ---> npm run dev
+
+
+
+
+ Font family
+      └──Baloo Bhaijaan 2✅
+      └── Montserrat✅
+      └── Oswald✅
+      └── Anton✅
+      └── Norwester✅
+
+
+
+
+
+Using Master Layout
+-------------------------------
+  ├── MasterLayout/
+  │   └── AppNavbar✅
+  │   └── Footer✅
+  │
+
+
+------------------------------------
+ Blood App ✅
+ ======================
+  ├── public/
+  │   └── css
+  │         └── style.css & common.css
+  │         └── footer.css
+  |   └── images
+  |   └── sound
+  ├── src/
+  │   ├── App.jsx
+  │   ├── index.jsx
+  │   └── assets
+  │   └── components ✅
+  │   └── MasterLayout✅
+  │   └── pages✅
+  │   └── zustand state library
+  │          └── store -- state = API action✅
+  │   └── Utility -- validation & utility✅
+  ├── package.json
+  ├── vite.config.js
+  ├── chart.js
+  ├── react-circular-progressbar
+  ├── npm i react-loading-skeleton
+  ├── import React, {lazy, Suspense} from 'react'; optimization page heavy components ✅
+
+
+  Use Packages ✅
+  Dependencies:
+
+
+    bootstrap:
+
+    bootstrap-icons:
+
+    react:
+
+    react-bootstrap:
+
+    react-bootstrap-icons:
+
+    react-dom:
+
+    react-hot-toast:
+
+    react-router-dom:
+
+    sweetalert2:
+
+    ------------------------------------------------------2025-------------------------------------------------------------
+
+
+
+to add onboarding user guidline
+React window and lazy  loading optimized✅
+├── router lazy✅
+  │----card and user card also post optimized✅
+  │       └──React Window✅
+           └──React infinity scroll
+     loading data optimized package react window and react infinity scroll
+
+

@@ -1,0 +1,63 @@
+1 a web site 
+blood donation
+every gruping blood progress
+and user submit her details 
+and admin can approved then visible web site 
+img uploading system
+
+
+
+
+
+
+
+
+
+
+--------------------------||Azim||----------------------------------------
+
+
+
+1. Registration Done
+2. Login Done
+3. Logout done
+4. user profile Create Done
+5. User Profile Read Done
+6. Email Verification code Send Done
+7. verified code user check Done
+8. User Profile Update Done
+9. Delete User Profile Done
+
+10. ALL Users Find Done
+11. Find By Division
+12. Find By Zila
+13. Find By Upzila
+14. Find By Name
+
+16. Count Blood Groups Find Users
+
+15. Location Collection Add
+----------------------------||Azim Note||-------------------------------------
+
+1. NID & Phone Number Validation cilo nah..ei dui ta amader jonne mandatory cilo tai add kora ta valo mone koresilam tai add kore dilam..
+2. e.name mane 
+Common e.name Values:
+Error Name	Description
+
+ValidationError:	                MongoDB/Mongoose ডাটার ভ্যালিডেশন এরর।
+SyntaxError:                	    কোডের সিনট্যাক্স ভুল থাকলে।
+TypeError:              	        ভুল ডেটা টাইপ ব্যবহার করলে।
+ReferenceError:             	    অবজেক্ট বা ভ্যারিয়েবল না থাকলে।
+CastError:              	        MongoDB তে ভুল টাইপ ডেটা ইনপুট দিলে।
+
+
+3. Email e jodi code nah jay tahole tumi config.js e giye tmr credential gula comment out kore nio
+
+----------------------------------------------------
+
+
+
+
+==============================ROHAN===============================
+1 apni code ta clone korar por npm i diye node_module install korben then (npm install figlet and npm install chalk@3)
+ar error asbena 
