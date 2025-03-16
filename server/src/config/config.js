@@ -1,7 +1,7 @@
 const dotenv = require("dotenv");
 
 // কনফিগ ফাইল লোড করা
-dotenv.config({ path: "./config.env" });
+dotenv.config({ path: ".env" });
 
 module.exports.PORT = process.env.PORT || 2020;
 module.exports.DATABASE_URL = process.env.DB;
