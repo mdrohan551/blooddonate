@@ -5,7 +5,7 @@ const locationController = require("../controller/locationController");
 const ImageUploadController = require("../controller/ImageUploadController");
 const authMiddleware = require("../middlewares/authMiddleware");
 const cloudUpload = require("../middlewares/CloudMulter");
-const PostController = require('../controller/PostController');
+const PostController = require('../controller/postController');
 
 const router = express.Router();
 
