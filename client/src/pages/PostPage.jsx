@@ -49,7 +49,7 @@ const PostPage = () => {
                 </div>
             </Suspense>
            <div className="text-center ">
-               <h1>------------------------------------</h1>
+               <h1 className='p-5' style={{marginBottom:"1px"}}></h1>
            </div>
         </div>
     );
