@@ -31,7 +31,7 @@ const App = () => {
             <Suspense fallback={<LoaderPage />}>
                 <Routes>
                     {/* Error route for unmatched paths */}
-                    <Route path="*" element={<Error />} />
+                    <Route path="/*" element={<Error />} />
                     {/* Home page */}
                     <Route path="/" element={<Home />} />
                     {/* All Blood Page */}
