@@ -1,3 +1,6 @@
 {
-    "rewirtes":[{"source":"/(.*)","destination":"/index.html"}]
-}
+    "rewrites": [
+      { "source": "/api/:path*", "destination": "http://oneblood.azimemil.xyz/api/:path*" }
+    ]
+  }
+  
