@@ -8,6 +8,7 @@ import AfterLoginIcon from "../components/AfterLoginIcon.jsx";
 import PostStore from "../store/PostStore.js";
 import UserStore from "../store/UsersStore.js";
 import PostLoader from '../Layout/Loader/PostLoader.jsx';
+import AppNavbar from '../Layout/AppNabbar.jsx';
 
 
 const MemoizedSideBar = memo(SideBar);
@@ -28,7 +29,8 @@ const PostPage = () => {
 
     const {isLogin}=usersStore()
     return (
-        <MasterLayout>
+        <div>
+           <AppNavbar/>
             <Suspense fallback={<PostLoader/>}>
                 <div className="container">
                     <div className="row justify-content-center g-2">
@@ -46,7 +48,10 @@ const PostPage = () => {
                     <MemoizedIconBar  />
                 </div>
             </Suspense>
-        </MasterLayout>
+           <div className="text-center ">
+               <h1>------------------------------------</h1>
+           </div>
+        </div>
     );
 };
 
