@@ -378,9 +378,9 @@
     .user-Name {
         padding: 5px 4rem !important;
 
-        h3 {
+        /* h3 {
             display: none;
-        }
+        } */
 
         p {
             /* background: rgba(169, 169, 169, 0.25); */
