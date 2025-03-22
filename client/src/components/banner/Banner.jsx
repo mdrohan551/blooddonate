@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 import UserStore from '../../store/UsersStore.js';
 import AfterLoginBanner from "./AfterLoginBanner.jsx";
 
-
+import LazyLoad from 'react-lazyload';
+import BannerLoader from '../../Layout/Loader/BannerLoader.jsx';
 
 const Banner = () => {
     const { isLogin } = UserStore();
@@ -86,7 +87,11 @@ const Banner = () => {
                 <div className="col-lg-6  order-lg-1 order-0 col-md-6 order-md-1">
                     <div className="banner_img d-flex justify-content-end ">
                         <div className="img-wrapper mb-3">
-                            <img src={bannerImg} alt="bannerImg" className="w-100 h-100 " />
+                            <LazyLoad 
+                                placeholder={<BannerLoader />}>
+                                <img src={bannerImg} alt="bannerImg" className="w-100 h-100 " />
+                            </LazyLoad>
+
                         </div>
                         <div className="chart">
                             {/* ✅ Small & Medium Device-এ Progress লুকানো হয়েছে */}

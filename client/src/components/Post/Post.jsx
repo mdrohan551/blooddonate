@@ -9,6 +9,8 @@ import PostLoader from "../../Layout/Loader/PostLoader.jsx";
 import InfiniteScroll from "react-infinite-scroll-component";
 import CommentsModal from "./CommentsModal.jsx";
 import ShareModal from "./ShareModal.jsx"; // Import ShareModal
+import LazyLoad from 'react-lazyload';
+import BannerLoader from "../../Layout/Loader/BannerLoader.jsx";
 
 const Post = () => {
     const { PostList, likePost, PostListRequest, commentForm, commentFromChange, commentPost } = PostStore();
@@ -161,7 +163,14 @@ const Post = () => {
                                                 <p>{item.post}</p>
                                             </div>
                                             <div className="postImage">
-                                                <img src={item.image} alt="post image" />
+                                                <LazyLoad className="postImage" placeholder={<BannerLoader/>}>
+                                                    <img
+                                                        src={item.image}
+                                                        alt="post image"
+                                                    
+                                                    />
+                                                </LazyLoad>
+                                          
                                             </div>
                                             <div className="countLikeAndComments d-flex justify-content-between">
                                                 <i className="bi bi-hand-thumbs-up-fill">
