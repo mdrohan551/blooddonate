@@ -376,9 +376,11 @@
     }
 
     .user-Name {
-        padding: 5px 4rem !important;
+        padding: 5px 0rem !important;
 
-
+        h3 {
+            font-size: 0.7rem;
+        }
         p {
             /* background: rgba(169, 169, 169, 0.25); */
             font-size: 0.6rem !important;
@@ -909,9 +911,11 @@
     }
 
     .user-Name {
-        padding: 5px 4rem !important;
+        padding: 5px 0rem !important;
 
-     
+        h3 {
+            font-size: 0.7rem;
+        }
 
         p {
             /* background: rgba(169, 169, 169, 0.25); */
@@ -1478,10 +1482,10 @@
     }
 
     .user-Name {
-        padding: 5px 4rem !important;
+        padding: 5px 0rem !important;
 
         h3 {
-            display: none;
+            font-size: 0.7rem;
         }
 
         p {
