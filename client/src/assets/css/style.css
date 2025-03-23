@@ -11,7 +11,9 @@
     --success: #1a9f09;
     --info: #486fc2;
 }
-
+body{
+    scroll-behavior: smooth scroll;
+}
 .fade-in {
     animation: fadeIn 1s ease-in-out;
 }
