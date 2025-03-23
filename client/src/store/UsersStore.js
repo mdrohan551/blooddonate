@@ -5,6 +5,66 @@ import {getEmail, setEmail, unauthorized} from "../utility/utility.js";
 import ProfileForm from "../components/UserProfile/ProfileForm.jsx";
 
 const UserStore = create((set) => ({
+    FACEBOOK_APP_ID:"630305946299624",
+    // signUpwithfacebook
+  UserData:null,
+    isLoggedIn: false,
+
+    setUserData: (data) => set({ userData: data, isLoggedIn: true }),
+    loginWithFacebook: async (response) => {
+        try {
+            const res = await axios.post('/api/v1/facebook-login', {
+                accessToken: response.accessToken,
+            });
+
+            if (res.data.status === 'success') {
+                set({ userData: res.data.user, isLoggedIn: true });
+            } else {
+                console.error(res.data.message);
+            }
+        } catch (error) {
+            console.error('Login failed:', error);
+        }
+    },
+
+    logout: () => set({ userData: null, isLoggedIn: false }),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     isFormSubmit: false,
     // totalblood grupe
     totalBlood: {},

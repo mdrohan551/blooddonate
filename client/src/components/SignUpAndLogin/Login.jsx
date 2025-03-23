@@ -8,6 +8,7 @@ import { FailAlert, SuccessAlert } from '../../utility/utility.js';
 import CommonButton from './CommonButton.jsx';
 import SignUp from './SignUp.jsx';
 
+
 const Login = () => {
     const [fail, setFail] = useState(false);
     const [errors, setErrors] = useState({
@@ -65,6 +66,7 @@ const Login = () => {
 
                     {/* Form Section */}
                     <div className="col-lg-5 col-12">
+
                         {click ? (
                             <SignUp
                                 click={toggleBackground}
@@ -106,18 +108,22 @@ const Login = () => {
                                 </div>
 
                                 <CommonButton onClick={handleSubmit} text="Login" className="enter" />
-
-                                <div className="SignUp text-center mt-3">
+        
+                                <div className="SignUp text-center mt-3  gap-2">
+                               
                                     <span className="text-danger">Create Account?</span>
                                     <Link onClick={toggleBackground} className="fw-bold ps-2" to="">
                                         Sign up
+
                                     </Link>
+
                                 </div>
                             </div>
                         )}
                     </div>
                 </div>
             </div>
+
             <ToastContainer position="top-center" autoClose={3000} />
         </div>
     );

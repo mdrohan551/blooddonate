@@ -11,7 +11,6 @@ const SignUp = (props) => {
     const [step, setStep] = useState(1);
     const [loading, setLoading] = useState(false);
     const { signForm, signFormChange, completeRegistrationForm } = UserStore();
-
     // State for the custom date picker
     const [startDate, setStartDate] = useState(
         signForm.DateOfBirth ? new Date(signForm.DateOfBirth) : null
@@ -48,7 +47,6 @@ const SignUp = (props) => {
                 return;
             }
         }
-
         // Step 2 Validation
         if (step === 2) {
             if (!signForm.DateOfBirth) {
@@ -64,7 +62,6 @@ const SignUp = (props) => {
                 return;
             }
         }
-
         // Step 3 Validation
         if (step === 3) {
             if (!/^01[3-9]\d{8}$/.test(signForm.phoneNumber)) {
@@ -76,14 +73,12 @@ const SignUp = (props) => {
                 return;
             }
         }
-
         if (step < 3) setStep(step + 1);
     };
 
     const prevStep = () => {
         if (step > 1) setStep(step - 1);
     };
-
     const FinalRegistration = async (event) => {
         event.preventDefault();
         setLoading(true);
@@ -94,14 +89,12 @@ const SignUp = (props) => {
             if (!passwordRegex.test(password)) return "Password must be at least 6 characters, contain a capital letter, a number, and a special character";
             return "";
         };
-
         const passwordError = validatePassword(signForm.password);
         if (passwordError) {
             setLoading(false);
             toast.error(passwordError);
             return;
         }
-
         let res = await completeRegistrationForm(signForm);
         if (res.status === 'success') {
             await SuccessAlert(res.message);
@@ -113,7 +106,6 @@ const SignUp = (props) => {
             setLoading(false);
         }
     };
-
     const bloodGrupe = ['O+', 'O-', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-'];
 
     return (

@@ -1,3 +1,19 @@
+
+/* In your CSS file or inline styles */
+.facebook-login-button {
+    border-radius: 50%; /* Make the icon rounded */
+    padding: 5px; /* Reduce the button size */
+    font-size: 18px; /* Make the icon smaller */
+    width: 3px; /* Control the overall width */
+    height:30px; /* Control the overall height */
+    background-color: #3b5998; /* Facebook blue background */
+    color: white; /* White icon */
+  }
+  
+  .facebook-login-button i {
+    font-size: 18px; /* Adjust icon size */
+  }
+
 /* Background */
 .bgLogin {
     overflow: hidden;
